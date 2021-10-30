@@ -136,9 +136,24 @@ footer {
       footer .top {
         flex-direction: column;
         width: 100vw;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        div{
+          width: 100%;
+          margin-top: 20px;
+          padding: 0 20px;
+          h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
     }
     .menu {
       flex-wrap: wrap;
+      span {
+        margin:5px 10px !important;
+      }
     }
    
 }
