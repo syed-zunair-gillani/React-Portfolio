@@ -6,7 +6,7 @@ import img from '../../asset/img/intro.jpg'
 export default function Intro() {
   return (
     <>
-      <section className="intro-wrapper container">
+      <section className="intro-wrapper">
         <h4>Hello We Are Developer</h4>
         <div className="intro-left">
           <h2>We help to create stunning & modren website.</h2>

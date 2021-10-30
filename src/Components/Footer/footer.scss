@@ -132,9 +132,13 @@ footer {
 
 
 @media (max-width:768px){
-    .top{
+    
+      footer .top {
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        width: 100vw;
     }
+    .menu {
+      flex-wrap: wrap;
+    }
+   
 }
