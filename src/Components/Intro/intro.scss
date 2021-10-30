@@ -1,0 +1,81 @@
+@import "../../Variables.scss";
+@import "../../Mixin.scss"; 
+
+.intro-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 6.25rem 0;
+    color: white;
+    position: relative;
+    
+    h4{
+        position: absolute;
+        transform: rotate(90deg);
+        top: 50%;
+        left: -250px;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: rgb(29, 29, 29);
+    }
+    .intro-left{
+        width: 50%;
+        height: 100%;
+        padding-left: 4rem;
+        padding-top: 40px;
+        h2{
+            font-size: 42px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 3.3rem;
+            position: relative;
+            &::after{
+                content: "";
+                height: 3px;
+                position: absolute;
+                width: 5rem;
+                bottom:-20px;
+                left: 0;
+                background: $purple;
+            }
+        }
+        p{
+            margin-top: 2.6rem;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+    }
+    .intro-right{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        img{
+            border: 1.5rem solid rgb(29, 29, 29);
+            border-radius: 3px;
+            height: 400px;
+        }
+        
+    }
+}    
+
+@media (max-width:768px) {
+    .intro-wrapper{
+        flex-direction: column !important;
+        width: 100vw;
+        h4{
+            left: -226px;
+            top: 34%;
+        }
+        .intro-left{
+            width: 100vw;
+            justify-content: left;
+            padding-right: 30px;
+            padding-top: 0;
+        }
+        .intro-right{
+            width: 100vw;
+            justify-content: center;
+            margin-top: 50px;
+        }
+    }
+}

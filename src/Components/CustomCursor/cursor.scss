@@ -1,0 +1,14 @@
+.cursor{
+    height: 30px;
+    width: 30px;
+    background: white;
+    border-radius: 50px;
+    position: fixed;
+    transition: .5s ease;
+    z-index: 1000;
+}
+
+h1:hover ~ .cursor{
+    transform: scale(4);
+    
+}

@@ -1,0 +1,169 @@
+@import "../../Variables.scss";
+@import "../../Mixin.scss";
+
+
+
+header{
+    width: 100vw;
+    height: 80px;
+    padding: 10px 5%;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    transition: .5s ease-in-out;
+    
+    h1{
+        color: $white;   
+    }
+    .logo-img img{
+        height: 50px;
+        width: 50px;
+        margin-top: 5px;
+        margin-right: 10px;
+        border-radius: 50px;
+        border: 3px solid $border
+    }
+    .logo-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    span{
+        color: none;
+        font-family: 'ubuntu';
+        font-weight: 500;
+        font-size: 22px;
+        letter-spacing: 1px;
+        -webkit-text-stroke: .5px $gray;
+    }
+    .bar{
+        color: $purple;
+        background-color: rgba(55, 62, 68, 0.5);
+        padding: 8px;
+        font-size: 20px;
+        border-radius: 2px;
+        // border: 2px solid $border;
+        cursor: pointer;
+    }
+}
+
+.navclose{
+    left: -100%;
+}
+.navopen{
+    left: 0;
+}
+.nav{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    top: 0;
+    transition: .5s ease-in-out;
+    color:$gray;
+    position: relative;
+    padding-top: 80px;
+    z-index: 100;
+    ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .times{
+        color: $purple;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    ul li{
+        padding: 1.5rem 0;
+        text-align: center;
+        opacity: 0.7;
+        position: relative;
+        
+        &:hover > i {
+            opacity: 1;
+            color: rgb(255, 255, 255);   
+        }
+        &::after{
+            content: attr(data-text);
+            position: absolute;
+            font-size: 100px;
+            color: rgb(10, 10, 10);
+            font-weight: 600;
+            z-index: -1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: 50px;
+            transition: .5s ease;
+            opacity: 0;  
+        }
+        &:hover::after{
+            opacity: 1;
+            letter-spacing: 2px;
+        }
+        &:hover {
+            opacity: 1;
+            color: $purple;
+            letter-spacing: 2px;
+            transition: 0.2s ease-in-out;
+        }
+        i{
+            font-size: 40px;
+            display: none;
+            margin-right: 10px;
+            color: $purple;
+            opacity: 1;
+        }
+        span{
+            font-size: 22px ;
+            font-weight: 500;
+            font-family: 'poppins';
+            transition: .5s;
+            text-transform: uppercase;    
+        }
+        
+    }
+    
+
+    .social {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        i{
+            color:$purple;
+            font-size: 20px;
+            margin-left: 15px;
+            transition: .5s;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+
+    
+
+}
+@media (max-width:768px) {
+    nav ul li::after{
+         font-size: 60px !important;
+     }
+ }
+ .active{
+    background: #1D1D1D;
+    box-shadow: 0 5px 12px rgba(0,0,0,.6);
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
