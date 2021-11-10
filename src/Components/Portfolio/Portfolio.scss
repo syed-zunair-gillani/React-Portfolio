@@ -1,0 +1,146 @@
+@import "../../Mixin.scss";
+
+.portfolio-wrapper{
+    margin-top: 120px;
+
+    p{
+       text-align: center;
+    //    margin-top: 5rem;
+       font-size: 20px;
+       font-weight: 400;
+       color: white;
+       letter-spacing: 1px;
+    }
+    h2{
+        font-size: 2.3rem;
+        color: white;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 7rem;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 4rem;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FF014F;
+        }
+    }
+}
+
+.card-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    .card{
+        width: 400px;
+        height: 400px;
+        position: relative;
+        margin: 0 15px;
+        .img{
+            text-decoration: none;
+            height: 100%;
+            width: 100%;    
+            background: #1D1D1D;
+            margin: 15px;
+            transition: .5s ease-in-out;
+            padding: 10px;
+            background-size:cover;
+            border: 10px solid #1D1D1D;;
+            box-shadow: 10px 10px 0px rgba(255,1,79,0.9);   
+        }
+        .border{
+            width: 370px;
+            height: 400px;
+            position: absolute;
+            transition: .5s ease;
+            bottom: -15px;
+            right: -15px;
+            color: white;
+            background: rgba(255,1,79,0.9);
+            opacity: 0; 
+            transition: .5s ease-in-out;
+            padding: 10px;
+            .inner{
+                height: 100%;
+                width: 100%; 
+                border: 2px solid white;
+                h1,h4,i{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                }
+                h1{
+                    font-size: 60px;
+                    padding-top: 120px;
+                    font-family: "ubuntu";
+                }
+                h4{
+                    font-size: 18px;
+                    letter-spacing: 1px; 
+                    font-family: "ubuntu"; 
+                }
+                i{
+                    background: white;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    color:#FF014F;
+                    margin-left: 45%;
+                    margin-top: 20px;
+                }
+            
+            }
+        }
+        &:hover .border{
+            opacity: 1;
+        }
+        &:hover .img{
+            box-shadow: none;
+        }
+    }
+
+}
+
+.more-portfolio-btn{
+    margin: 100px 0;
+    text-align: center;
+  
+    .btn{
+        width: 40px;
+        height: 20px;
+        border-left: 3px solid #FF014F;
+        padding: 12px 40px;
+        position: relative;
+        color: white;
+        transition: .5s ease-in-out;
+        &:hover{
+            background: #FF014F;
+        }
+    }
+    
+}
+@media (max-width:786px) {
+    .card-wrapper{
+        flex-direction: column;
+    }
+    .card-wrapper .card .img{
+        margin: 0;
+    
+    }
+    .card-wrapper .card{
+        margin: 0;
+        margin-bottom: 40px;
+        width: 320px;
+        height: 320px;
+    }
+    .border{
+        width: 400px;
+        bottom: 0px;
+        right: 0px;
+    }
+}
