@@ -55,8 +55,8 @@ export default function Services() {
         <h2>New Branding Agency</h2>
         <div className="services-wrapper">
 
-          {Data.map((props) => (
-            <div className="card">
+          {Data.map((props, index) => (
+            <div className="card" key={index}>
               <div className="services-card">
                 <i className={props.icon}></i>
                 <h3>{props.title}</h3>

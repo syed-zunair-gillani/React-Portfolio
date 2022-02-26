@@ -12,7 +12,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <section className="portfolio-wrapper">
+      <section id="portfolio" className="portfolio-wrapper">
         <p>Our Portfolio</p>
         <h2>Resent Projects</h2>
         <div className="services-wrapper"></div>
@@ -20,37 +20,37 @@ export default function Portfolio() {
       <div className="container">
         <div className="card-wrapper">
             <div className="card" >
-              <div class="img" style={{backgroundImage: `url('${awi}')`}}></div>
+              <div className="img" style={{backgroundImage: `url('${awi}')`}}></div>
               <div className="border">
                 <div className="inner">
                       <h1>7awi</h1>
                       <h4>Wordpress</h4>
                       <a href="#" target="_blank" >
-                        <i class="fas fa-link"></i>    
+                        <i className="fas fa-link"></i>    
                       </a>
                 </div>
               </div>
             </div>
             <div className="card" >
-              <div class="img" style={{backgroundImage: `url('${linkessay}')`}}></div>
+              <div className="img" style={{backgroundImage: `url('${linkessay}')`}}></div>
               <div className="border">
                 <div className="inner">
                       <h1>Linkessay</h1>
                       <h4>Wordpress</h4>
                       <a href="#" target="_blank" >
-                        <i class="fas fa-link"></i>    
+                        <i className="fas fa-link"></i>    
                       </a>
                 </div>
               </div>
             </div>
             <div className="card" >
-              <div class="img" style={{backgroundImage: `url('${hash21}')`}}></div>
+              <div className="img" style={{backgroundImage: `url('${hash21}')`}}></div>
               <div className="border">
                 <div className="inner">
                       <h1>Hash21</h1>
                       <h4>Wordpress</h4>
                       <a href="#" target="_blank" >
-                        <i class="fas fa-link"></i>    
+                        <i className="fas fa-link"></i>    
                       </a>
                 </div>
               </div>

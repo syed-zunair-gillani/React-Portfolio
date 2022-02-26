@@ -18,7 +18,9 @@ export default function Header() {
     }
   };
   window.addEventListener('scroll', SetHeaderBg);
-
+  const navhide = () => {
+    setToggle(false);
+  }
   return (
     <>
       <header className={bgActive ? "active" : ""}>
@@ -43,41 +45,41 @@ export default function Header() {
           <Link to="/">
             <li data-text="Home">
               <i className="fas fa-home"></i>
-              <span>Home</span>
+              <span onClick={navhide}>Home</span>
             </li>
           </Link>
-          <Link to="/portfolio">
+          <Link to="#portfolio">
             <li data-text="Portfolio">
               <i className="fas fa-briefcase"></i>
-              <span>portfolio</span>
+              <span onClick={navhide}>portfolio</span>
             </li>
           </Link>
-          <Link to="/about">
+          <Link to="#about">
             <li data-text="About">
               <i className="fas fa-user"></i>
-              <span>about</span>
+              <span onClick={navhide}>about</span>
             </li>
           </Link>
-          <Link to="/services">
-            <li data-text="Services">
+          <Link to="#services">
+            <li data-text="Services" >
               <i className="fas fa-cog"></i>
-              <span>services</span>
+              <span onClick={navhide}>services</span>
             </li>
           </Link>
-          <Link to="/contact">
+          <Link to="#contact">
             <li data-text="Contact">
               <i className="fas fa-envelope"></i>
-              <span>contact</span>
+              <span onClick={navhide}>contact</span>
             </li>
           </Link>
         </ul>
         <div className="social">
-          <Link>
+          <Link to="">
             <i className="fab fa-facebook-f"></i>
           </Link>
-          <Link><i className="fab fa-instagram"></i></Link>
-          <Link><i className="fab fa-linkedin-in"></i></Link>
-          <Link>
+          <Link to=""><i className="fab fa-instagram"></i></Link>
+          <Link to=""><i className="fab fa-linkedin-in"></i></Link>
+          <Link to="">
             <i className="fab fa-twitter"></i>
           </Link>
         </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import "../Testimonial/TestimonialStyle.scss";
-import gman from "../../asset/img/gman.png";
 
 export default function Testimonial() {
   return (
@@ -24,7 +23,7 @@ export default function Testimonial() {
             </h1>
           </marquee>
           <marquee behavior="" direction="right">
-            <h1 class="sec-tes">
+            <h1 className="sec-tes">
               My new site created by zunair just launched. They’ve done a great
               job of creating exactly what I wanted. Easy to work with and very
               responsive. They met all of my expectations and had a lot of

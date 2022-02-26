@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../Header/Header";
 import "../Hero/Hero.scss";
 import { Typewriter } from 'react-simple-typewriter'
 import { Link } from "react-router-dom";
 
+
 export default function Hero() {
   return (
     <>
-      <Header />
+    
       <section className="hero">
       
         <div className="content">
@@ -26,12 +26,12 @@ export default function Hero() {
         </div>
         <div className="hero-social">
           <Link>
-            <i class="fab fa-facebook-f"></i>
+            <i className="fab fa-facebook-f"></i>
           </Link>
-          <Link><i class="fab fa-instagram"></i></Link>
-          <Link><i class="fab fa-linkedin-in"></i></Link>
+          <Link><i className="fab fa-instagram"></i></Link>
+          <Link><i className="fab fa-linkedin-in"></i></Link>
           <Link>
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
           </Link>
         </div>
       </section>
